@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New GcUsuario{% endblock %}
+
+{% block body %}
+    <h1>Create new GcUsuario</h1>
+
+    {{ include('gc_usuario/_form.html.twig') }}
+
+    <a href="{{ path('gc_usuario_index') }}">back to list</a>
+{% endblock %}

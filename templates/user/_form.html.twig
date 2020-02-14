@@ -1,0 +1,120 @@
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        {{ form_label(form.empresa, 'Empresa:') }}
+    </div>
+    <div class="col-sm-10">
+        {{ form_errors(form.empresa) }}
+        {{ form_widget(form.empresa) }}
+    </div>
+</div>
+
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        {{ form_label(form.username, 'Usuario:') }}
+    </div>
+    <div class="col-sm-10">
+        {{ form_errors(form.username) }}
+        {{ form_widget(form.username) }}
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        {{ form_label(form.email, 'Email:') }}
+    </div>
+    <div class="col-sm-10">
+        {{ form_errors(form.email) }}
+        {{ form_widget(form.email) }}
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        {{ form_label(form.password, 'Contraseña:') }}
+    </div>
+    <div class="col-sm-10">
+        {{ form_errors(form.password) }}
+        {{ form_widget(form.password) }}
+    </div>
+</div>
+
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        El usuario se puede conectar:
+    </div>
+    <div class="col-sm-10">
+        {{ form_errors(form.enabled) }}
+        {{ form_widget(form.enabled) }}
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-sm-2">
+      Tercer intento caduca
+    </div>
+    <div class="col-sm-10">
+        {{ form_errors(form.usCaducarIntento) }}
+        {{ form_widget(form.usCaducarIntento) }}
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        {{ form_label(form.roles, 'El usuario es administrador:') }}
+    </div>
+    <div class="col-sm-10">
+        {{ form_errors(form.roles) }}
+        {{ form_widget(form.roles) }}
+    </div>
+</div>
+
+
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        {{ form_label(form.perfil, 'Perfil:') }}
+    </div>
+    <div class="col-sm-10">
+        {{ form_errors(form.perfil) }}
+        {{ form_widget(form.perfil) }}
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        El usuario puede consultar  datos de otros puntos de venta
+    </div>
+    <div class="col-sm-2">
+        {{ form_errors(form.usConsultaOtrosDatosPv) }}
+        {{ form_widget(form.usConsultaOtrosDatosPv) }}
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        El usuario maneja punto de venta con cierre de caja
+    </div>
+    <div class="col-sm-2">
+        {{ form_errors(form.usCierreCajaPv) }}
+        {{ form_widget(form.usCierreCajaPv) }}
+    </div>
+</div>
+
+<div class="form-group row">
+    <div class="col-sm-2">
+        El usuario puede manejar documentos electrónicos
+    </div>
+    <div class="col-sm-2">
+        {{ form_errors(form.usDocumentosElectronicosManejo) }}
+        {{ form_widget(form.usDocumentosElectronicosManejo) }}
+    </div>
+</div>
+
+{{ form_row(form._token) }}
+<button class="btn btn-primary">{{ button_label|default('Guardar') }}</button>
+

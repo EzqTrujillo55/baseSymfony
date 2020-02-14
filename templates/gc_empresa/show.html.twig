@@ -1,0 +1,286 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GcEmpresa{% endblock %}
+
+{% block body %}
+    <h1>GcEmpresa</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>EmId</th>
+                <td>{{ gc_empresa.emId }}</td>
+            </tr>
+            <tr>
+                <th>EmCodigo</th>
+                <td>{{ gc_empresa.emCodigo }}</td>
+            </tr>
+            <tr>
+                <th>EmNombre</th>
+                <td>{{ gc_empresa.emNombre }}</td>
+            </tr>
+            <tr>
+                <th>EmDireccion</th>
+                <td>{{ gc_empresa.emDireccion }}</td>
+            </tr>
+            <tr>
+                <th>EmTelefono</th>
+                <td>{{ gc_empresa.emTelefono }}</td>
+            </tr>
+            <tr>
+                <th>EmFax</th>
+                <td>{{ gc_empresa.emFax }}</td>
+            </tr>
+            <tr>
+                <th>EmEmail</th>
+                <td>{{ gc_empresa.emEmail }}</td>
+            </tr>
+            <tr>
+                <th>EmCiudad</th>
+                <td>{{ gc_empresa.emCiudad }}</td>
+            </tr>
+            <tr>
+                <th>EmRuc</th>
+                <td>{{ gc_empresa.emRuc }}</td>
+            </tr>
+            <tr>
+                <th>EmPeriodo</th>
+                <td>{{ gc_empresa.emPeriodo }}</td>
+            </tr>
+            <tr>
+                <th>EmObservacion</th>
+                <td>{{ gc_empresa.emObservacion }}</td>
+            </tr>
+            <tr>
+                <th>EmSitioWeb</th>
+                <td>{{ gc_empresa.emSitioWeb }}</td>
+            </tr>
+            <tr>
+                <th>EmImagen</th>
+                <td>{{ gc_empresa.emImagen }}</td>
+            </tr>
+            <tr>
+                <th>EmPatronal</th>
+                <td>{{ gc_empresa.emPatronal }}</td>
+            </tr>
+            <tr>
+                <th>EmEstado</th>
+                <td>{{ gc_empresa.emEstado }}</td>
+            </tr>
+            <tr>
+                <th>EmTipo</th>
+                <td>{{ gc_empresa.emTipo }}</td>
+            </tr>
+            <tr>
+                <th>EmIva</th>
+                <td>{{ gc_empresa.emIva }}</td>
+            </tr>
+            <tr>
+                <th>EmInventario</th>
+                <td>{{ gc_empresa.emInventario }}</td>
+            </tr>
+            <tr>
+                <th>EmSistemaInventario</th>
+                <td>{{ gc_empresa.emSistemaInventario }}</td>
+            </tr>
+            <tr>
+                <th>EmContribuyenteEspecial</th>
+                <td>{{ gc_empresa.emContribuyenteEspecial }}</td>
+            </tr>
+            <tr>
+                <th>EmComprobanteAutomatico</th>
+                <td>{{ gc_empresa.emComprobanteAutomatico }}</td>
+            </tr>
+            <tr>
+                <th>EmTelefonoResponsable</th>
+                <td>{{ gc_empresa.emTelefonoResponsable }}</td>
+            </tr>
+            <tr>
+                <th>EmFaxResponsable</th>
+                <td>{{ gc_empresa.emFaxResponsable }}</td>
+            </tr>
+            <tr>
+                <th>EmEmailResponsable</th>
+                <td>{{ gc_empresa.emEmailResponsable }}</td>
+            </tr>
+            <tr>
+                <th>EmAuditarMensaje</th>
+                <td>{{ gc_empresa.emAuditarMensaje }}</td>
+            </tr>
+            <tr>
+                <th>EmNumeroDecimales</th>
+                <td>{{ gc_empresa.emNumeroDecimales ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmIce</th>
+                <td>{{ gc_empresa.emIce }}</td>
+            </tr>
+            <tr>
+                <th>EmVerificaContinuidad</th>
+                <td>{{ gc_empresa.emVerificaContinuidad ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmRazonSocial</th>
+                <td>{{ gc_empresa.emRazonSocial }}</td>
+            </tr>
+            <tr>
+                <th>EmResponsableTdId</th>
+                <td>{{ gc_empresa.emResponsableTdId ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmResponsableDocumento</th>
+                <td>{{ gc_empresa.emResponsableDocumento }}</td>
+            </tr>
+            <tr>
+                <th>EmContadorRuc</th>
+                <td>{{ gc_empresa.emContadorRuc }}</td>
+            </tr>
+            <tr>
+                <th>EmMoneda</th>
+                <td>{{ gc_empresa.emMoneda }}</td>
+            </tr>
+            <tr>
+                <th>EmResponsableNombre</th>
+                <td>{{ gc_empresa.emResponsableNombre }}</td>
+            </tr>
+            <tr>
+                <th>EmContadorNombre</th>
+                <td>{{ gc_empresa.emContadorNombre }}</td>
+            </tr>
+            <tr>
+                <th>EmContadorCpa</th>
+                <td>{{ gc_empresa.emContadorCpa }}</td>
+            </tr>
+            <tr>
+                <th>EmComprobanteAgrupado</th>
+                <td>{{ gc_empresa.emComprobanteAgrupado }}</td>
+            </tr>
+            <tr>
+                <th>EmResponsableTitulo</th>
+                <td>{{ gc_empresa.emResponsableTitulo }}</td>
+            </tr>
+            <tr>
+                <th>EmLlevaContabilidad</th>
+                <td>{{ gc_empresa.emLlevaContabilidad }}</td>
+            </tr>
+            <tr>
+                <th>EmManejaCentroCosto</th>
+                <td>{{ gc_empresa.emManejaCentroCosto }}</td>
+            </tr>
+            <tr>
+                <th>EmBarrasManejo</th>
+                <td>{{ gc_empresa.emBarrasManejo }}</td>
+            </tr>
+            <tr>
+                <th>PaId</th>
+                <td>{{ gc_empresa.paId }}</td>
+            </tr>
+            <tr>
+                <th>EmAplicaNiif</th>
+                <td>{{ gc_empresa.emAplicaNiif }}</td>
+            </tr>
+            <tr>
+                <th>EmFechaContrato</th>
+                <td>{{ gc_empresa.emFechaContrato ? gc_empresa.emFechaContrato|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>EmFechaUltimoPago</th>
+                <td>{{ gc_empresa.emFechaUltimoPago ? gc_empresa.emFechaUltimoPago|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>EmRegistrosContratados</th>
+                <td>{{ gc_empresa.emRegistrosContratados }}</td>
+            </tr>
+            <tr>
+                <th>EmContactoNombre</th>
+                <td>{{ gc_empresa.emContactoNombre }}</td>
+            </tr>
+            <tr>
+                <th>EmContactoTelefono</th>
+                <td>{{ gc_empresa.emContactoTelefono }}</td>
+            </tr>
+            <tr>
+                <th>EmDepartamentosManejo</th>
+                <td>{{ gc_empresa.emDepartamentosManejo }}</td>
+            </tr>
+            <tr>
+                <th>EmMultiplesDescuentos</th>
+                <td>{{ gc_empresa.emMultiplesDescuentos }}</td>
+            </tr>
+            <tr>
+                <th>EmAplicaNiifMetodoDirecto</th>
+                <td>{{ gc_empresa.emAplicaNiifMetodoDirecto ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmAplicaContratoPago</th>
+                <td>{{ gc_empresa.emAplicaContratoPago ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmResolucionContribuyenteEspecial</th>
+                <td>{{ gc_empresa.emResolucionContribuyenteEspecial }}</td>
+            </tr>
+            <tr>
+                <th>EmDocumentosElectronicos</th>
+                <td>{{ gc_empresa.emDocumentosElectronicos ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmDocsElecAmbiente</th>
+                <td>{{ gc_empresa.emDocsElecAmbiente ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmDocsElecTipoEmision</th>
+                <td>{{ gc_empresa.emDocsElecTipoEmision ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmServicioPorcentaje</th>
+                <td>{{ gc_empresa.emServicioPorcentaje }}</td>
+            </tr>
+            <tr>
+                <th>EmDocsElecFuncionamiento</th>
+                <td>{{ gc_empresa.emDocsElecFuncionamiento ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmDocsElecDatoAdicionalCodigo</th>
+                <td>{{ gc_empresa.emDocsElecDatoAdicionalCodigo }}</td>
+            </tr>
+            <tr>
+                <th>EmLimiteConsultas</th>
+                <td>{{ gc_empresa.emLimiteConsultas }}</td>
+            </tr>
+            <tr>
+                <th>EmParametroLimiteVentaConsumidorFinal</th>
+                <td>{{ gc_empresa.emParametroLimiteVentaConsumidorFinal }}</td>
+            </tr>
+            <tr>
+                <th>EmServicioRentaActivo</th>
+                <td>{{ gc_empresa.emServicioRentaActivo ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmDocsElecFechaCaduca</th>
+                <td>{{ gc_empresa.emDocsElecFechaCaduca ? gc_empresa.emDocsElecFechaCaduca|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>EmDocsEmailCopia</th>
+                <td>{{ gc_empresa.emDocsEmailCopia }}</td>
+            </tr>
+            <tr>
+                <th>EmCodigoEntidadControl1</th>
+                <td>{{ gc_empresa.emCodigoEntidadControl1 }}</td>
+            </tr>
+            <tr>
+                <th>EmInventarioLotes</th>
+                <td>{{ gc_empresa.emInventarioLotes ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>EmDocsElecLecturaMasiva</th>
+                <td>{{ gc_empresa.emDocsElecLecturaMasiva ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('gc_empresa_index') }}">back to list</a>
+
+    <a href="{{ path('gc_empresa_edit', {'emId': gc_empresa.emId}) }}">edit</a>
+
+    {{ include('gc_empresa/_delete_form.html.twig') }}
+{% endblock %}

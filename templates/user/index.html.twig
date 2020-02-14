@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <h1>Restringir Transacciones</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Transacciona</th>
+                <th>Acciones Transacciona</th>
+                <th>Perfil</th>
+                <th>Usuario</th>
+                <th>Puede conectarse</th>
+
+
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>
+                    {{ user.usTransacciona }}
+
+                </td>
+                <td>
+                    <a class="btn btn-success" href="{{path('habilitar', {'id': user.id})}}">Habilitar</a>
+                    <a class="btn btn-danger" href="{{path('restringir', {'id': user.id})}}">Restringir</a>
+
+                </td>
+                <td> {{ user.perfil }}</td>
+                <td>{{ user.username }}</td>
+
+                <td>{{ user.enabled ? 'Yes' : 'No' }}</td>
+              <!--  <td>{{ user.roles ? user.roles|join(', ') : '' }}</td>
+
+                <td>{{ user.lastLogin ? user.lastLogin|date('Y-m-d H:i:s') : '' }}</td> -->
+
+
+
+                <td>
+                    <a class="btn btn-warning far fa-eye" href="{{ path('user_show', {'id': user.id}) }}"></a>
+                    <a class="btn btn-success fas fa-pencil-alt" href="{{ path('user_edit', {'id': user.id}) }}"></a>
+                    <a href="{{ path('prueba') }}">ss</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="17">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+ <!--   <a href="{{ path('user_new') }}">Create new</a> -->
+{% endblock %}

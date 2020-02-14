@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GcPerfil index{% endblock %}
+
+{% block body %}
+    <h1>Perfiles</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Empresa</th>
+                <th>Tipo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for gc_perfil in gc_perfils %}
+            <tr>
+                <td>{{ gc_perfil.prId }}</td>
+                <td>{{ gc_perfil.prNombre }}</td>
+                <td>{{ gc_perfil.empresa }}</td>
+                <td>{{ gc_perfil.prTipo }}</td>
+                <td>
+                    <a href="{{ path('gc_perfil_show', {'prId': gc_perfil.prId}) }}">show</a>
+                    <a href="{{ path('gc_perfil_edit', {'prId': gc_perfil.prId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('gc_perfil_new') }}">Create new</a>
+{% endblock %}

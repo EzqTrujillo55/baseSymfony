@@ -1,0 +1,555 @@
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+<div class="jumbotron mt-2">
+    <h4> <a href="#datosgenerales" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Datos Generales</a> </h4>
+
+    <div id="datosgenerales" class="collapse">
+        <hr>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emCodigo, 'Código acceso') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emCodigo) }}
+                {{ form_widget(form.emCodigo) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emNombre, 'Nombre comercial') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emNombre) }}
+                {{ form_widget(form.emNombre) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emRazonSocial, 'Razón social') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emRazonSocial) }}
+                {{ form_widget(form.emRazonSocial) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.paId, 'País fiscal') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.paId) }}
+                {{ form_widget(form.paId) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emCiudad, 'Ciudad') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emCiudad) }}
+                {{ form_widget(form.emCiudad) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emDireccion, 'Dirección') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emDireccion) }}
+                {{ form_widget(form.emDireccion) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emTelefono, 'Teléfono') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emTelefono) }}
+                {{ form_widget(form.emTelefono) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emSitioWeb, 'Sitio Web') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emSitioWeb) }}
+                {{ form_widget(form.emSitioWeb) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emEmail, 'Correo electrónico') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emEmail) }}
+                {{ form_widget(form.emEmail) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emFax, 'Fax') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emFax) }}
+                {{ form_widget(form.emFax) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emObservacion, 'Observación') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emObservacion) }}
+                {{ form_widget(form.emObservacion) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emPeriodo, 'Periodo') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emPeriodo) }}
+                {{ form_widget(form.emPeriodo) }}
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="jumbotron">
+    <h4> <a href="#declaracion" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Declaración Impuestos</a> </h4>
+
+    <div id="declaracion" class="collapse">
+        <hr>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emRuc, 'Documento fiscal') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emRuc) }}
+                {{ form_widget(form.emRuc) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emNombre, 'Tipo persona:') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emTipo) }}
+                {{ form_widget(form.emTipo) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emContribuyenteEspecial, 'Contribuyente especial') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emContribuyenteEspecial) }}
+                {{ form_widget(form.emContribuyenteEspecial) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emPatronal, 'Número patronal') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emPatronal) }}
+                {{ form_widget(form.emPatronal) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emResolucionContribuyenteEspecial, 'Resolución') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emResolucionContribuyenteEspecial) }}
+                {{ form_widget(form.emResolucionContribuyenteEspecial) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emLlevaContabilidad, 'Lleva contabilidad') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emLlevaContabilidad) }}
+                {{ form_widget(form.emLlevaContabilidad) }}
+            </div>
+        </div>
+
+        <h4>Datos del Responsable - Representante Legal</h4>
+        <hr>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emResponsableTitulo, 'Título') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emResponsableTitulo) }}
+                {{ form_widget(form.emResponsableTitulo) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emResponsableNombre, 'Nombre') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emResponsableNombre) }}
+                {{ form_widget(form.emResponsableNombre) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emTelefonoResponsable, 'Teléfono') }}
+            </div>
+            <div class="col-sm-4">
+                {{ form_errors(form.emTelefonoResponsable) }}
+                {{ form_widget(form.emTelefonoResponsable) }}
+            </div>
+            <div class="col-sm-2 text-right">
+                {{ form_label(form.emFaxResponsable, 'Fax') }}
+            </div>
+            <div class="col-sm-4">
+                {{ form_errors(form.emFaxResponsable) }}
+                {{ form_widget(form.emFaxResponsable) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emEmailResponsable, 'E-mail') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emEmailResponsable) }}
+                {{ form_widget(form.emEmailResponsable) }}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <h4> <a href="#parametros" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Parámetros</a> </h4>
+
+    <div id="parametros" class="collapse">
+        <hr>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emImagen, 'Imagen') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emImagen) }}
+                {{ form_widget(form.emImagen) }}
+            </div>
+        </div>
+
+
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emIce, 'ICE Predeterminado') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emIce) }}
+                {{ form_widget(form.emIce) }}
+            </div>
+
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emSistemaInventario, 'Sistema de inventarios') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emSistemaInventario) }}
+                {{ form_widget(form.emSistemaInventario) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emInventario, 'Contabilización de inventarios') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emInventario) }}
+                {{ form_widget(form.emInventario) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emComprobanteAgrupado, 'Comprobante agrupado') }}
+            </div>
+            <div class="col-sm-4">
+                {{ form_errors(form.emComprobanteAgrupado) }}
+                {{ form_widget(form.emComprobanteAgrupado) }}
+            </div>
+
+        </div>
+
+
+        <div class="form-group row">
+
+            <div class="col-sm-6">
+                {{ form_errors(form.emVerificaContinuidad) }}
+                {{ form_widget(form.emVerificaContinuidad) }}
+            </div>
+            <div class="col-sm-2">
+                {{ form_label(form.emAuditarMensaje, 'Registrar mensajes') }}
+            </div>
+            <div class="col-sm-4">
+                {{ form_errors(form.emAuditarMensaje) }}
+                {{ form_widget(form.emAuditarMensaje) }}
+            </div>
+
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emManejaCentroCosto, 'Centro de costos') }}
+            </div>
+            <div class="col-sm-4">
+                {{ form_errors(form.emManejaCentroCosto) }}
+                {{ form_widget(form.emManejaCentroCosto) }}
+            </div>
+            <div class="col-sm-2 text-right">
+                {{ form_label(form.emDepartamentosManejo, 'Manejo de departamentos') }}
+            </div>
+            <div class="col-sm-4">
+                {{ form_errors(form.emDepartamentosManejo) }}
+                {{ form_widget(form.emDepartamentosManejo) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emAplicaNiif, 'Aplica NIIFS') }}
+            </div>
+            <div class="col-sm-4">
+                {{ form_errors(form.emAplicaNiif) }}
+                {{ form_widget(form.emAplicaNiif) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_errors(form.emAplicaNiifMetodoDirecto) }}
+                {{ form_widget(form.emAplicaNiifMetodoDirecto) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emMultiplesDescuentos, 'Multiples descuentos') }}
+            </div>
+            <div class="col-sm-4">
+                {{ form_errors(form.emMultiplesDescuentos) }}
+                {{ form_widget(form.emMultiplesDescuentos) }}
+            </div>
+            <div class="col-sm-2 text-right">
+                {{ form_label(form.emBarrasManejo, 'Inventario Código Barras') }}
+            </div>
+            <div class="col-sm-4">
+                {{ form_errors(form.emBarrasManejo) }}
+                {{ form_widget(form.emBarrasManejo) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-12">
+                {{ form_errors(form.emInventarioLotes) }}
+                {{ form_widget(form.emInventarioLotes) }}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="jumbotron">
+    <h4> <a href="#anexos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Anexos-varios</a> </h4>
+
+    <div id="anexos" class="collapse">
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>Datos adicionales del responsable</h4>
+                <hr>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        Tipo de documento:
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_errors(form.emResponsableTdId) }}
+                        {{ form_widget(form.emResponsableTdId) }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        {{ form_label(form.emResponsableDocumento, 'Tipo persona:') }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_errors(form.emResponsableDocumento) }}
+                        {{ form_widget(form.emResponsableDocumento) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h4>Datos adicionales del contador</h4>
+                <hr>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        {{ form_label(form.emContadorNombre, 'Nombre:') }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_errors(form.emContadorNombre) }}
+                        {{ form_widget(form.emContadorNombre) }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        {{ form_label(form.emContadorRuc, 'RUC:') }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_errors(form.emContadorRuc) }}
+                        {{ form_widget(form.emContadorRuc) }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        {{ form_label(form.emContadorCpa, 'CPA:') }}
+                    </div>
+                    <div class="col-sm-6">
+                        {{ form_errors(form.emContadorCpa) }}
+                        {{ form_widget(form.emContadorCpa) }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emContactoNombre, 'Contacto') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emContactoNombre) }}
+                {{ form_widget(form.emContactoNombre) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emContactoTelefono, 'Teléfono-email') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emContactoTelefono) }}
+                {{ form_widget(form.emContactoTelefono) }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <h4> <a href="#edocs" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Docs electrónicos</a> </h4>
+
+    <div id="edocs" class="collapse">
+        <hr>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                Activar:
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emDocumentosElectronicos) }}
+                {{ form_widget(form.emDocumentosElectronicos) }}
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                Tipo ambiente:
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emDocsElecAmbiente) }}
+                {{ form_widget(form.emDocsElecAmbiente) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                Funcionamiento:
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emDocsElecFuncionamiento) }}
+                {{ form_widget(form.emDocsElecFuncionamiento) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emDocsElecDatoAdicionalCodigo, 'Código externo:') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emDocsElecDatoAdicionalCodigo) }}
+                {{ form_widget(form.emDocsElecDatoAdicionalCodigo) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                {{ form_label(form.emDocsEmailCopia, 'Correo electrónico copia:') }}
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emDocsEmailCopia) }}
+                {{ form_widget(form.emDocsEmailCopia) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                Lectura masiva de documentos:
+            </div>
+            <div class="col-sm-10">
+                {{ form_errors(form.emDocsElecLecturaMasiva) }}
+                {{ form_widget(form.emDocsElecLecturaMasiva) }}
+            </div>
+        </div>
+
+    </div>
+</div>
+{{ form_row(form._token) }}
+<button class="btn btn-primary">{{ button_label|default('Registrar') }}</button>
+
+

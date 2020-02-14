@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New GcPais{% endblock %}
+
+{% block body %}
+    <h1>Create new GcPais</h1>
+
+    {{ include('gc_pais/_form.html.twig') }}
+
+    <a href="{{ path('gc_pais_index') }}">back to list</a>
+{% endblock %}

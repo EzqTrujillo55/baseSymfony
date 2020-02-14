@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GcUsuario index{% endblock %}
+
+{% block body %}
+    <h1>GcUsuario index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>UsId</th>
+                <th>EmId</th>
+                <th>UsCodigo</th>
+                <th>UsUsuario</th>
+                <th>UsContrasena</th>
+                <th>UsEstado</th>
+                <th>UsObservacion</th>
+                <th>UsSaldo</th>
+                <th>UsMes</th>
+                <th>UsNivel</th>
+                <th>UsAgrupado</th>
+                <th>UsFechaInicial</th>
+                <th>UsFechaFinal</th>
+                <th>UsAdministrar</th>
+                <th>PeId</th>
+                <th>BoId</th>
+                <th>UsSaldoBanco</th>
+                <th>UsSaldoInicial</th>
+                <th>UsConectado</th>
+                <th>UsTransacciona</th>
+                <th>UsCaducarIntento</th>
+                <th>PvId</th>
+                <th>UsConsultaOtrosDatosPv</th>
+                <th>UsCierreCajaPv</th>
+                <th>UsPassword</th>
+                <th>UsDocumentosElectronicosManejo</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for gc_usuario in gc_usuarios %}
+            <tr>
+                <td>{{ gc_usuario.usId }}</td>
+                <td>{{ gc_usuario.emId }}</td>
+                <td>{{ gc_usuario.usCodigo }}</td>
+                <td>{{ gc_usuario.usUsuario }}</td>
+                <td>{{ gc_usuario.usContrasena }}</td>
+                <td>{{ gc_usuario.usEstado }}</td>
+                <td>{{ gc_usuario.usObservacion }}</td>
+                <td>{{ gc_usuario.usSaldo }}</td>
+                <td>{{ gc_usuario.usMes }}</td>
+                <td>{{ gc_usuario.usNivel }}</td>
+                <td>{{ gc_usuario.usAgrupado }}</td>
+                <td>{{ gc_usuario.usFechaInicial ? gc_usuario.usFechaInicial|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ gc_usuario.usFechaFinal ? gc_usuario.usFechaFinal|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ gc_usuario.usAdministrar }}</td>
+                <td>{{ gc_usuario.peId }}</td>
+                <td>{{ gc_usuario.boId }}</td>
+                <td>{{ gc_usuario.usSaldoBanco }}</td>
+                <td>{{ gc_usuario.usSaldoInicial }}</td>
+                <td>{{ gc_usuario.usConectado }}</td>
+                <td>{{ gc_usuario.usTransacciona }}</td>
+                <td>{{ gc_usuario.usCaducarIntento }}</td>
+                <td>{{ gc_usuario.pvId }}</td>
+                <td>{{ gc_usuario.usConsultaOtrosDatosPv }}</td>
+                <td>{{ gc_usuario.usCierreCajaPv }}</td>
+                <td>{{ gc_usuario.usPassword }}</td>
+                <td>{{ gc_usuario.usDocumentosElectronicosManejo ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('gc_usuario_show', {'usId': gc_usuario.usId}) }}">show</a>
+                    <a href="{{ path('gc_usuario_edit', {'usId': gc_usuario.usId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="27">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('gc_usuario_new') }}">Create new</a>
+{% endblock %}

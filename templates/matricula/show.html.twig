@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Matricula{% endblock %}
+
+{% block body %}
+    <h1>Matricula</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ matricula.id }}</td>
+            </tr>
+            <tr>
+                <th>Estudiante</th>
+                <td>{{ matricula.estudiante }}</td>
+            </tr>
+            <tr>
+                <th>Materia</th>
+                <td>{{ matricula.materia }}</td>
+            </tr>
+            <tr>
+                <th>Horario</th>
+                <td>{{ matricula.horario }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('matricula_index') }}">back to list</a>
+
+    <a href="{{ path('matricula_edit', {'id': matricula.id}) }}">edit</a>
+
+    {{ include('matricula/_delete_form.html.twig') }}
+{% endblock %}

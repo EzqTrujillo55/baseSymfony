@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit GcEmpresa{% endblock %}
+
+{% block body %}
+    <h1>Edit GcEmpresa</h1>
+
+    {{ include('gc_empresa/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('gc_empresa_index') }}">back to list</a>
+
+    {{ include('gc_empresa/_delete_form.html.twig') }}
+{% endblock %}

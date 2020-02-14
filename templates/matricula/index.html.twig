@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Matricula index{% endblock %}
+
+{% block body %}
+    <h1>Matricula index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Estudiante</th>
+                <th>Materia</th>
+                <th>Horario</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for matricula in matriculas %}
+            <tr>
+                <td>{{ matricula.id }}</td>
+                <td>{{ matricula.estudiante }}</td>
+                <td>{{ matricula.materia }}</td>
+                <td>{{ matricula.horario }}</td>
+                <td>
+                    <a href="{{ path('matricula_show', {'id': matricula.id}) }}">show</a>
+                    <a href="{{ path('matricula_edit', {'id': matricula.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('matricula_new') }}">Create new</a>
+{% endblock %}

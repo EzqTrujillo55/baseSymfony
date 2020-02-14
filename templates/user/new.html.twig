@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+    <div class=" jumbotron mt-2 container">
+    <h1>Crear Usuario</h1>
+    {{ include('user/_form.html.twig') }}
+   <!-- <a href="{{ path('user_index') }}">back to list</a> -->
+    </div>
+{% endblock %}

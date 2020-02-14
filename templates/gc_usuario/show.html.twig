@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GcUsuario{% endblock %}
+
+{% block body %}
+    <h1>GcUsuario</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>UsId</th>
+                <td>{{ gc_usuario.usId }}</td>
+            </tr>
+            <tr>
+                <th>EmId</th>
+                <td>{{ gc_usuario.emId }}</td>
+            </tr>
+            <tr>
+                <th>UsCodigo</th>
+                <td>{{ gc_usuario.usCodigo }}</td>
+            </tr>
+            <tr>
+                <th>UsUsuario</th>
+                <td>{{ gc_usuario.usUsuario }}</td>
+            </tr>
+            <tr>
+                <th>UsContrasena</th>
+                <td>{{ gc_usuario.usContrasena }}</td>
+            </tr>
+            <tr>
+                <th>UsEstado</th>
+                <td>{{ gc_usuario.usEstado }}</td>
+            </tr>
+            <tr>
+                <th>UsObservacion</th>
+                <td>{{ gc_usuario.usObservacion }}</td>
+            </tr>
+            <tr>
+                <th>UsSaldo</th>
+                <td>{{ gc_usuario.usSaldo }}</td>
+            </tr>
+            <tr>
+                <th>UsMes</th>
+                <td>{{ gc_usuario.usMes }}</td>
+            </tr>
+            <tr>
+                <th>UsNivel</th>
+                <td>{{ gc_usuario.usNivel }}</td>
+            </tr>
+            <tr>
+                <th>UsAgrupado</th>
+                <td>{{ gc_usuario.usAgrupado }}</td>
+            </tr>
+            <tr>
+                <th>UsFechaInicial</th>
+                <td>{{ gc_usuario.usFechaInicial ? gc_usuario.usFechaInicial|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UsFechaFinal</th>
+                <td>{{ gc_usuario.usFechaFinal ? gc_usuario.usFechaFinal|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UsAdministrar</th>
+                <td>{{ gc_usuario.usAdministrar }}</td>
+            </tr>
+            <tr>
+                <th>PeId</th>
+                <td>{{ gc_usuario.peId }}</td>
+            </tr>
+            <tr>
+                <th>BoId</th>
+                <td>{{ gc_usuario.boId }}</td>
+            </tr>
+            <tr>
+                <th>UsSaldoBanco</th>
+                <td>{{ gc_usuario.usSaldoBanco }}</td>
+            </tr>
+            <tr>
+                <th>UsSaldoInicial</th>
+                <td>{{ gc_usuario.usSaldoInicial }}</td>
+            </tr>
+            <tr>
+                <th>UsConectado</th>
+                <td>{{ gc_usuario.usConectado }}</td>
+            </tr>
+            <tr>
+                <th>UsTransacciona</th>
+                <td>{{ gc_usuario.usTransacciona }}</td>
+            </tr>
+            <tr>
+                <th>UsCaducarIntento</th>
+                <td>{{ gc_usuario.usCaducarIntento }}</td>
+            </tr>
+            <tr>
+                <th>PvId</th>
+                <td>{{ gc_usuario.pvId }}</td>
+            </tr>
+            <tr>
+                <th>UsConsultaOtrosDatosPv</th>
+                <td>{{ gc_usuario.usConsultaOtrosDatosPv }}</td>
+            </tr>
+            <tr>
+                <th>UsCierreCajaPv</th>
+                <td>{{ gc_usuario.usCierreCajaPv }}</td>
+            </tr>
+            <tr>
+                <th>UsPassword</th>
+                <td>{{ gc_usuario.usPassword }}</td>
+            </tr>
+            <tr>
+                <th>UsDocumentosElectronicosManejo</th>
+                <td>{{ gc_usuario.usDocumentosElectronicosManejo ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('gc_usuario_index') }}">back to list</a>
+
+    <a href="{{ path('gc_usuario_edit', {'usId': gc_usuario.usId}) }}">edit</a>
+
+    {{ include('gc_usuario/_delete_form.html.twig') }}
+{% endblock %}

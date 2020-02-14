@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GcPais index{% endblock %}
+
+{% block body %}
+    <h1>GcPais index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>PaId</th>
+                <th>PaNombre</th>
+                <th>PaNacionalidad</th>
+                <th>PaObservacion</th>
+                <th>PaEstado</th>
+                <th>PaDiscado</th>
+                <th>EmId</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for gc_pai in gc_pais %}
+            <tr>
+                <td>{{ gc_pai.paId }}</td>
+                <td>{{ gc_pai.paNombre }}</td>
+                <td>{{ gc_pai.paNacionalidad }}</td>
+                <td>{{ gc_pai.paObservacion }}</td>
+                <td>{{ gc_pai.paEstado }}</td>
+                <td>{{ gc_pai.paDiscado }}</td>
+                <td>{{ gc_pai.emId }}</td>
+                <td>
+                    <a href="{{ path('gc_pais_show', {'paId': gc_pai.paId}) }}">show</a>
+                    <a href="{{ path('gc_pais_edit', {'paId': gc_pai.paId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('gc_pais_new') }}">Create new</a>
+{% endblock %}

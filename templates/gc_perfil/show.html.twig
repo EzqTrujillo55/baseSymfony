@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GcPerfil{% endblock %}
+
+{% block body %}
+    <h1>GcPerfil</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>PrId</th>
+                <td>{{ gc_perfil.prId }}</td>
+            </tr>
+            <tr>
+                <th>PrEmId</th>
+                <td>{{ gc_perfil.prEmId }}</td>
+            </tr>
+            <tr>
+                <th>PrNombre</th>
+                <td>{{ gc_perfil.prNombre }}</td>
+            </tr>
+            <tr>
+                <th>EmId</th>
+                <td>{{ gc_perfil.emId }}</td>
+            </tr>
+            <tr>
+                <th>PrTipo</th>
+                <td>{{ gc_perfil.prTipo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('gc_perfil_index') }}">back to list</a>
+
+    <a href="{{ path('gc_perfil_edit', {'prId': gc_perfil.prId}) }}">edit</a>
+
+    {{ include('gc_perfil/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,74 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<style>
+    .wrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    #sidebar {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 999;
+        transition: all 0.3s;
+    }
+
+    a{
+        color:white;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color:white;
+        text-decoration: none;
+    }
+
+
+
+</style>
+
+<div class="fos_user_user_show">
+    <div class="wrapper">
+        <nav id="sidebar" class="bg-dark text-white pl-2" >
+            <div class="sidebar-header">
+                <h3>WIAM</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Parámetros</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#empresa" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Empresa</a>
+                            <ul class="collapse list-unstyled" id="empresa">
+                                <li>
+                                    <a href="{{ path('gc_empresa_new') }}" >Datos Empresa</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#sucursal" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sucursal</a>
+                            <ul class="collapse list-unstyled" id="sucursal">
+                                <li>
+                                    <a href="#" >Sucursal</a>
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+            </ul>
+
+        </nav>
+        <!-- Page Content -->
+        <div id="content">
+
+        </div>
+    </div>
+</div>

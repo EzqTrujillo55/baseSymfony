@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Matricula{% endblock %}
+
+{% block body %}
+    <div class="jumbotron" style="margin-top:2%">
+    <h1 class="text-center">Matriculación</h1>
+
+    {{ include('matricula/_form.html.twig') }}
+
+    <a class="form-control btn btn-warning mt-3" href="{{ path('matricula_index') }}">Ver lista de matriculas</a>
+    </div>
+{% endblock %}
